@@ -1,0 +1,9 @@
+p{
+    line-height: 13px;
+    padding-left: 5px;
+}
+div img{
+    width: 230px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
