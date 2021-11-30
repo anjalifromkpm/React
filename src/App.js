@@ -1,13 +1,13 @@
 import React from "react";
-import Header from './Header';
-import Cart from "./Cart";
+import Header from './Style/Header';
+import Employees from "./Files/TableData/Employees";
 
 class App extends React.Component{
     render(){
         return(
             <React.Fragment>
               <Header />
-              <Cart />
+              <Employees />
             </React.Fragment>
         )
     }
