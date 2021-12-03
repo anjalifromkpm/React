@@ -1,0 +1,40 @@
+.secondary-header{
+    background-color: #222222;
+}
+.btn-bg-color{
+    background-color: #222222 !important;
+    color: #fff !important;
+}
+.def-text-color{
+    color: #666;
+}
+.header-icon-color{
+    color: #c7b39a !important;
+}
+.navbar-nav{
+    column-gap: 15px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0 0 0 / 79%) !important;
+}
+li.nav-item {
+    font-size: 17px;
+    font-weight: 400;
+}
+.main-header{
+    border-bottom: 2px solid #222222;
+}
+
+
+/******************** Dummy styles ****************************/
+
+.headclr{
+    color: tomato;
+    font-size: 25px;
+    font-weight: 500;
+}
+.headclr:hover{
+    color: rgb(20, 145, 145);
+    
+}
+
