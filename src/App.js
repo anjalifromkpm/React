@@ -7,6 +7,7 @@ import Services from './Files/Router/Routing2/Services';
 import WhyUs from './Files/Router/Routing2/WhyUs';
 import Contact from './Files/Router/Routing2/Contact';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
+//import Form2 from './Files/FormHandling/Form2';
 
 class App extends React.Component{
     render(){
@@ -22,6 +23,7 @@ class App extends React.Component{
                             <Route path="/contact" element={<Contact />}/>
                         </Routes>
                     </BrowserRouter>
+                    {/*<Form2/>*/}
             </React.Fragment>
         )
     }
