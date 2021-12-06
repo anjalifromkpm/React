@@ -29,7 +29,7 @@ class Form2 extends React.Component{
                                    <div className="form-group mb-3">
                                        <label className="form-label">Email</label>
                                        <input type="text" name="Email" className="form-control" onChange={this.UpdateHandler}/>
-                                   </div>
+                                    </div>
                                    <div className="form-group mb-3">
                                        <label className="form-label">Password</label>
                                        <input type="text" name="Password" className="form-control" onChange={this.UpdateHandler}/>

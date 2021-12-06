@@ -7,8 +7,8 @@ import Services from './Files/Router/Routing2/Services';
 import WhyUs from './Files/Router/Routing2/WhyUs';
 import Contact from './Files/Router/Routing2/Contact';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-//import Form2 from './Files/FormHandling/Form2';
-
+//import Form3 from "./Files/FormHandling/Form3";
+import Employees from "./Files/TableData/Employees";
 class App extends React.Component{
     render(){
         return(
@@ -23,7 +23,7 @@ class App extends React.Component{
                             <Route path="/contact" element={<Contact />}/>
                         </Routes>
                     </BrowserRouter>
-                    {/*<Form2/>*/}
+                    <Employees />
             </React.Fragment>
         )
     }
