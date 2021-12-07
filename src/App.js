@@ -1,14 +1,14 @@
 import React from "react";
-import './Files/Router/Routing2/Style.css';
-import Header from "./Files/Router/Routing2/Header";
-import Home from "./Files/Router/Routing2/Home";
-import About from './Files/Router/Routing2/About';
-import Services from './Files/Router/Routing2/Services';
-import WhyUs from './Files/Router/Routing2/WhyUs';
-import Contact from './Files/Router/Routing2/Contact';
+import './Files/Practices/Router/Routing2/Style.css';
+import Header from "./Files/Practices/Router/Routing2/Header";
+import Home from "./Files/Practices/Router/Routing2/Home";
+import About from './Files/Practices/Router/Routing2/About'
+import Services from './Files/Practices/Router/Routing2/Services';
+import WhyUs from './Files/Practices/Router/Routing2/WhyUs';
+import Contact from './Files/Practices/Router/Routing2//Contact';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-//import Form3 from "./Files/FormHandling/Form3";
-import Employees from "./Files/TableData/Employees";
+import User from "./Files/Practices/Axios/User";
+
 class App extends React.Component{
     render(){
         return(
@@ -23,7 +23,7 @@ class App extends React.Component{
                             <Route path="/contact" element={<Contact />}/>
                         </Routes>
                     </BrowserRouter>
-                    <Employees />
+                    <User/>
             </React.Fragment>
         )
     }
