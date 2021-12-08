@@ -4,7 +4,6 @@ import React from "react";
 //import Two from './Two';
 //import Three from "./Three";
 //import Four from "./Four";
-import FiveProps from "./props/FiveProps";
 
 class App extends React.Component{
     render(){

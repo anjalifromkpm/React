@@ -1,7 +1,7 @@
 import React from "react";
 
 class ProductUi1 extends React.Component{
-    render(props){
+    render(){
         return(
             <React.Fragment>
                 <div className="col-md-3 col-sm-6">
