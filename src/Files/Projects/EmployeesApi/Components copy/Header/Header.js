@@ -32,7 +32,7 @@ class Header extends Component {
                                     <Link className="nav-link" to="/employees">Employees</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/contact">Contact</Link>
+                                    <Link className="nav-link" to="/contact">About</Link>
                                 </li>
                             </ul>
                         </div>

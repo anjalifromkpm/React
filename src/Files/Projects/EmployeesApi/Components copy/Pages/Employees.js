@@ -27,6 +27,7 @@ class Employees extends Component {
                                         <table className="table table-dark table-hover">
                                             <thead>
                                                 <tr>
+                                                    <th>ID</th>
                                                     <th>NAME</th>
                                                     <th>EMAIL</th>
                                                     <th>COURSE</th>
@@ -39,6 +40,7 @@ class Employees extends Component {
                                                     this.state.userData.map((elem,index)=>{
                                                         return (
                                                             <tr key={index}>
+                                                                <td>{elem.id}</td>
                                                                 <td>{elem.name}</td>
                                                                 <td>{elem.email}</td>
                                                                 <td>{elem.course}</td>
