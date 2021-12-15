@@ -2,6 +2,14 @@ import React, { Component } from "react";
 import Data from "./Data";
 
 class Employees extends Component{
+    state = {
+        Inputvalue:''
+    }
+    showInputvalue = (e)=>{
+        this.setState({Inputvalue:e.target.value})
+    }
+
+
     Res = Data;
     Dis = this.Res.map((Elem,Index)=>{
         return <tr key={Index}>
@@ -14,10 +22,12 @@ class Employees extends Component{
     render(){
         return(
             <React.Fragment>
-                <div className="container w-75">
+                <div className="container w-75 mt-5">
                     <div className="d-flex justify-content-between">
-                        <h2>Employees Lists</h2>
-                        <input type="text" placeholder="Search..." id="search" className="form-control w-25"/>
+                        <h2>Employees Lists: {this.state.Inputvalue}</h2>
+                        <input type="text" placeholder="Search..." value={this.state.Inputvalue}
+                        onChange={this.showInputvalue}
+                        className="form-control w-25"/>
                     </div>
                     <table className="table table-hover mt-4 m-auto">
                         <thead>
