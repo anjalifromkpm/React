@@ -1,10 +1,10 @@
 import React from 'react';
-import Three from './Three/Three'
+import Four from './Four/Four';
 
 let App = ()=>{
     return (
         <>
-           <Three /> 
+           <Four /> 
         </>
     )
 }
