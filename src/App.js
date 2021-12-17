@@ -7,7 +7,6 @@ import Services from './Files/Practices/Router/Routing2/Services';
 import WhyUs from './Files/Practices/Router/Routing2/WhyUs';
 import Contact from './Files/Practices/Router/Routing2//Contact';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-import User from "./Files/Practices/Axios/User";
 
 class App extends React.Component{
     render(){
@@ -23,7 +22,6 @@ class App extends React.Component{
                             <Route path="/contact" element={<Contact />}/>
                         </Routes>
                     </BrowserRouter>
-                    <User/>
             </React.Fragment>
         )
     }
