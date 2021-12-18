@@ -1,0 +1,39 @@
+*{
+    border-collapse: collapse !important;
+    list-style-type: none !important;
+    text-decoration: none !important;
+    font-family: 'Poppins', sans-serif;
+}
+.text-content p{
+    font-family:sans-serif;
+    line-height: 30px;
+}
+.section-gap{
+    margin-top: 4em;
+}
+
+/*** Header ***/
+.bg-secondary-header{
+    background-color:#063386;
+}
+ul.navbar-nav  a{
+    font-size: 17px !important;
+    padding: 5px 15px !important;
+    color: black !important;
+}
+/*** Home ***/
+.home-banner{
+    background-image: url('./Images/Banner.jpg');
+    background-size: 100% 100% !important;
+    height: 450px;
+}
+.sm-heading{
+    font-size: 13px !important;
+    letter-spacing: 1px;
+    color: #e93440 ;
+}
+.lg-heading{
+    font-size: 35px !important;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
