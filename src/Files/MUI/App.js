@@ -1,9 +1,10 @@
 import React from 'react';
-import Test from './Test';
+import Checkboxes from'./Checkboxes';
+
 let App = ()=>{
     return (
         <>
-            <Test />
+           <Checkboxes /> 
         </>
     )
 }
