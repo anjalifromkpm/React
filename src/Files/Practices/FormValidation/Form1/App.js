@@ -1,10 +1,10 @@
 import React from 'react';
-import TodoLists from './TodoLists';
+import Form from './Form';
 
 const App = ()=>{
     return (
-        <div className='my-5'>
-            <TodoLists />
+        <div>
+            <Form />
         </div>
     )
 }
