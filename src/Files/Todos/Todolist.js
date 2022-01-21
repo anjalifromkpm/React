@@ -8,10 +8,8 @@ const Todolist = ({Todos,deleteHandler,views,editHandler})=>{
             <tr>
                 <th>S.NO</th>
                 <th>Name</th>
-                <th>Email</th>
                 <th>Project</th>
                 <th>Task</th>
-                <th>Status</th>
                 <th>Status</th>
                 <th>Start Date</th>
                 <th>End Date</th>
@@ -24,13 +22,11 @@ const Todolist = ({Todos,deleteHandler,views,editHandler})=>{
                    return(<tr key={index}>
                             <td>{index+1}</td>
                             <td>{todo.name}</td>
-                            <td>{todo.email}</td>
-                            <td>{todo.number}</td>
                             <td>{todo.project_name}</td>
                             <td>{todo.task_description}</td>
+                            <td>{todo.status}</td>
                             <td>{todo.start_date}</td>
                             <td>{todo.end_date}</td>
-                            <td>{todo.status}</td>
                             <td className='text-center table-delete-edit_btn d-flex ps-4'>
                                 <i className="bi bi-pencil-square text-success"
                                 onClick={()=>editHandler(index)}></i> 
