@@ -116,7 +116,7 @@ const App = ()=>{
   return(<>
     <div className="container">
         <div className='row m-md-auto'>
-            <div className='col col-md-6  m-md-auto'>
+            <div className='col col-md-6  m-md-auto p-3 shadow'>
                 <div className='gutter-gap'>
                     <h1 className='text-center mb-3'>To Do List</h1>
                     <form method='post' onSubmit={submitHandler}>
