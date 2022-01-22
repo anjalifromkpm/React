@@ -116,7 +116,7 @@ const App = ()=>{
   return(<>
     <div className="container">
         <div className='row m-md-auto'>
-            <div className='col col-md-6  m-md-auto p-3 shadow'>
+            <div className='col col-md-8  m-md-auto p-3 shadow'>
                 <div className='gutter-gap'>
                     <h1 className='text-center mb-3'>To Do List</h1>
                     <form method='post' onSubmit={submitHandler}>
@@ -127,13 +127,13 @@ const App = ()=>{
                             <p className='text-danger m-0'>{InputErrors.name}</p>
                         </div> 
                         <div className='mb-3 d-md-flex '>
-                            <div className='w-50 me-1'>
+                            <div className='w-md-50 me-md-1 mb-3 mb-md-0'>
                                 <input type='text' placeholder='Enter A Valid Email' name='email' className='form-control rounded-0'
                                 value={Inputvalues.email}
                                 onChange={changeHandler}/>
                                 <p className='text-danger m-0'>{InputErrors.email}</p>
                             </div>
-                            <div className='w-50 ms-1'>
+                            <div className='w-md-50 ms-md-1'>
                                 <input type='text' placeholder='Enter A Valid Mobile Number' name='number' className='form-control rounded-0'
                                 value={Inputvalues.number}
                                 onChange={changeHandler}/>
@@ -153,14 +153,14 @@ const App = ()=>{
                             <p className='text-danger m-0'>{InputErrors.task_description}</p>
                         </div>
                         <div className='mb-3 d-md-flex'>
-                        <div className='w-50 me-1'>
+                        <div className='w-md-50 me-md-1 mb-3 mb-md-0'>
                                 <p>Start Date</p>
                                 <input type='date' name='start_date' className='form-control rounded-0'
                                 value={Inputvalues.start_date}
                                 onChange={changeHandler}/>
                                 <p className='text-danger m-0'>{InputErrors.start_date}</p>
                             </div>
-                            <div className='w-50 ms-1'>
+                            <div className='w-md-50 ms-md-1 mb-md-0'>
                                 <p>End Date</p>
                                 <input type='date' name='end_date' className='form-control rounded-0'
                                 value={Inputvalues.end_date}
@@ -169,7 +169,7 @@ const App = ()=>{
                             </div>
                         </div> 
                         <div className='mb-3'>
-                           <div className=' d-md-flex align-items-center radio-status'>
+                           <div className=' d-sm-flex align-items-center radio-status'>
                                 <p className='m-0'>Task Status:</p> 
                                 <input type='radio' name='status' className='' value='Planned'
                                 onChange={changeHandler}/> Planned
@@ -180,7 +180,7 @@ const App = ()=>{
                             </div>
                            <p className='text-danger m-0'>{InputErrors.status}</p>
                         </div>
-                        <div className='mb-3 d-md-flex align-items-center justify-content-between mt-3'>
+                        <div className='mb-3 d-flex align-items-center justify-content-between mt-3'>
                            <input type='submit' value='SUBMIT' className='btn btn-primary  rounded-0'/>
                            <button type='button' className='btn btn-success rounded-0'
                            onClick={()=> setviews(true)}>VIEW</button>
