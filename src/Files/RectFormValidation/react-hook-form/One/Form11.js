@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { useForm } from 'react-hook-form';
 
-const Form1 = ()=>{
+const Form11 = ()=>{
     const [Todos,setTodos] = useState([]);
     const [InitialValues,setInitialValues] = useState({
         f_name:'',
@@ -180,4 +180,4 @@ const Form1 = ()=>{
   </>)
 }
 
-export default Form1;
+export default Form11;
