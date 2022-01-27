@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Todolist = ({Todos,deleteHandler,views,editHandler})=>{
-  return(<>{(views)===true?<>
-  {
+const Todolist = ({Todos,deleteHandler,editHandler,filterValues})=>{
+  return(<>
+    {
         Object.keys(Todos).length>0?<table className='table table-striped'>
         <thead>
             <tr>
@@ -39,8 +39,6 @@ const Todolist = ({Todos,deleteHandler,views,editHandler})=>{
         </tbody>
     </table>:null
     }
-  </>:null}
-    
   </>)
 }
 

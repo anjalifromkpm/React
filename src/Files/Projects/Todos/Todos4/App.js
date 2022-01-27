@@ -18,32 +18,42 @@ const App = ()=>{
     const [views,setviews] = useState(false);
     const [InputErrors,setInputErrors] = useState({});
     const [isSubmit,setisSubmit] = useState(false);
+    const [filterValues,setfilterValues] = useState({status:''})
+    const [filterVal,setfilterVal] = useState({status:''})
 
     const changeHandler = (e)=>{
         setInputvalues({...Inputvalues,[e.target.name]:e.target.value})
+        const sharedata = setfilterValues({[e.target.name]:e.target.value})
+        setfilterVal(sharedata)
+    }
+    const filterHandler = ()=>{
+        console.log(filterVal);
     }
     const submitHandler = (e)=>{
         e.preventDefault();
         setInputErrors(Validate(Inputvalues))
-        // // const newTodos = [...Todos,Inputvalues];
-        // // setTodos(newTodos);
         setisSubmit(true);
+        const newTodos = [...Todos,Inputvalues];
+        setTodos(newTodos);
+        console.log(Todos);
     }
     useEffect(()=>{
         if((Object.keys(InputErrors).length===0 && isSubmit)){
             const newTodos = [...Todos,Inputvalues];
             setTodos(newTodos);
         }
+        
     },[InputErrors])
 
     const deleteHandler = (IndexValue)=>{
-        const FilteredTodo = Todos.filter((elem,index)=> index !==IndexValue);
+        const FilteredTodo = Todos.filter((elem,index)=> index!==IndexValue);
         setTodos(FilteredTodo);
     }
+    
     const editHandler = (editIndexValue)=>{
-        const FilteredTodo = Todos.filter((elem,index)=> index !==editIndexValue);
+        const FilteredTodo = Todos.filter((elem,index)=> index!==editIndexValue);
         setTodos(FilteredTodo);
-        const editSelector = Todos.find((elem,index)=> index ===editIndexValue);
+        const editSelector = Todos.find((elem,index)=> index===editIndexValue);
         setInputvalues({
             name:editSelector.name,
             email:editSelector.email,
@@ -172,18 +182,18 @@ const App = ()=>{
                            <div className=' d-sm-flex align-items-center radio-status'>
                                 <p className='m-0'>Task Status:</p> 
                                 <input type='radio' name='status' className='' value='Planned'
-                                onChange={changeHandler}/> Planned
+                                onChange={changeHandler} /> Planned
                                 <input type='radio' name='status' className='' value='In-Progress'
-                                onChange={changeHandler}/> In-Progress
+                                onChange={changeHandler} /> In-Progress
                                 <input type='radio' name='status' className='' value='Done'
-                                onChange={changeHandler}/> Done
+                                onChange={changeHandler} /> Done
                             </div>
                            <p className='text-danger m-0'>{InputErrors.status}</p>
                         </div>
                         <div className='mb-3 d-flex align-items-center justify-content-between mt-3'>
                            <input type='submit' value='SUBMIT' className='btn btn-primary  rounded-0'/>
                            <button type='button' className='btn btn-success rounded-0'
-                           onClick={()=> setviews(true)}>VIEW</button>
+                           onClick={filterHandler}>VIEW</button>
                         </div> 
                     </form>
                 </div>
@@ -193,7 +203,7 @@ const App = ()=>{
         <div className='row mt-4'>
             <div className='col  m-md-auto'>
                 <div className='gutter-gap'>
-                    <Todolist Todos={Todos} deleteHandler={deleteHandler} views={views} editHandler={editHandler}/>
+                    <Todolist Todos={Todos} deleteHandler={deleteHandler} views={views} editHandler={editHandler} filterValues={filterValues}/>
                 </div>
             </div>
         </div>
