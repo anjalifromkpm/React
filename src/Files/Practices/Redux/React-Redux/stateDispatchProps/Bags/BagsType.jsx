@@ -1,0 +1,8 @@
+const MATHS = 'MATHS';
+const SOCIAL = 'SOCIAL';
+const RULED = 'RULED';
+const UNRULED = 'UNRULED';
+const BLUE = 'BLUE';
+const BLACK = 'BLACK';
+
+export {MATHS,SOCIAL,RULED,UNRULED,BLUE,BLACK};
