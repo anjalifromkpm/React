@@ -10,7 +10,7 @@ const App = ()=>{
     }
     const submitHandler = (e)=>{
         e.preventDefault();
-        const newTodos = [Inputvalue,...Todos]
+        const newTodos = [Inputvalue,...Todos];
         setTodos(newTodos);
         setInputvalue(' ');
         console.log(Todos);
