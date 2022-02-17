@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-const Todolist = ({todolist,removeTasK}) => {
+
+const Todolist = ({todolist,removeTasK,taskToupdate,showPopup}) => {
 
     const removeTask = (id)=>{
         axios.delete(`http://localhost:8000/api/tasks/${id}`)
@@ -10,7 +11,8 @@ const Todolist = ({todolist,removeTasK}) => {
         .catch((err)=>{console.log(err)})
     }
   return (<>
-    <div className='container'>
+    {
+        todolist.length>0?<div className='container'>
         <div className='row'>
             <div className='col-6 m-auto'>
                 <div>
@@ -19,20 +21,22 @@ const Todolist = ({todolist,removeTasK}) => {
                             <tr>
                                 <td>S NO</td>
                                 <td>NAME</td>
-                                <td>EMAIL</td>
                                 <td>ACTION</td>
                             </tr>
                         </thead>
                         <tbody>
                             {
                                 todolist.map((elem,index)=>{
-                                    return(<tr>
+                                    return(<tr key={index}>
                                         <td>{index+1}</td>
                                         <td>{elem.name}</td>
-                                        <td>{elem.email}</td>
                                         <td>
-                                            <i class="bi bi-pencil-square taxt-success me-3" style={{cursor:'pointer'}}></i>
-                                            <i class="bi bi-trash text-danger" style={{cursor:'pointer'}}
+                                            <i className="bi bi-pencil-square taxt-success me-3" style={{cursor:'pointer'}}
+                                            onClick={()=>{
+                                                taskToupdate(elem)
+                                                showPopup()
+                                            }}></i>
+                                            <i className="bi bi-trash text-danger" style={{cursor:'pointer'}}
                                             onClick={()=>{removeTask(elem._id)}}></i>
                                         </td>
                                     </tr>)
@@ -43,7 +47,8 @@ const Todolist = ({todolist,removeTasK}) => {
                 </div>
             </div>
         </div>
-    </div>
+    </div>:null
+    }
   </>)
 }
 

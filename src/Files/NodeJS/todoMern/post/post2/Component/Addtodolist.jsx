@@ -11,8 +11,7 @@ const Addtodolist = ({addTask}) => {
             return
         }else{
             axios.post('http://localhost:8000/api/tasks',{
-                name:name,
-                email:email
+                name:name
             })
             .then((res)=>{
                 setemail('')
@@ -31,17 +30,12 @@ const Addtodolist = ({addTask}) => {
                 <div>
                     <form onSubmit={submitHandler}>
                         <h1 className='text-center mb-4'>Login Form</h1>
-                        <div class="mb-3">
-                            <label class="form-label">User name</label>
-                            <input type="text" class="form-control" name='name' value={name}
+                        <div className="mb-3">
+                            <label className="form-label">User name</label>
+                            <input type="text" className="form-control" name='name' value={name}
                             onChange={(e)=>{setname(e.target.value)}}/>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Email address</label>
-                            <input type="text" class="form-control" name='email' value={email}
-                            onChange={(e)=>{setemail(e.target.value)}}/>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" className="btn btn-primary">Submit</button>
                     </form>
                 </div>
             </div>
@@ -50,4 +44,4 @@ const Addtodolist = ({addTask}) => {
   </>)
 }
 
-export default Addtodolist
+export default Addtodolist;
