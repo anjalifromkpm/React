@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+
 const Edit = ({ submitData, id, setSubmitData}) => {
   const [name, setName] = useState(submitData[id].name);
-
   const save = (e) => {
     e.preventDefault();
     let newSubmitData = [...submitData];
@@ -10,7 +10,6 @@ const Edit = ({ submitData, id, setSubmitData}) => {
     };
     setSubmitData([...newSubmitData]);
   };
-
   return (<>
           <form onSubmit={save}>
             <div className="d-flex align-items-center">
