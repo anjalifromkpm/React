@@ -11,8 +11,7 @@ const Todolist = ({todolist,removeTasK,taskToupdate,showPopup}) => {
         .catch((err)=>{console.log(err)})
     }
   return (<>
-    {
-        todolist.length>0?<div className='container'>
+   <div className='container'>
         <div className='row'>
             <div className='col-6 m-auto'>
                 <div>
@@ -47,8 +46,7 @@ const Todolist = ({todolist,removeTasK,taskToupdate,showPopup}) => {
                 </div>
             </div>
         </div>
-    </div>:null
-    }
+    </div>
   </>)
 }
 

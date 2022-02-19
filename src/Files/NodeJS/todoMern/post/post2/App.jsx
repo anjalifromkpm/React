@@ -7,7 +7,7 @@ import Updatetodo from './Component/Updatetodo';
 const App = () => {
     const [todolist,setTodolist] = useState([])
     const [taskToupdate,settaskToupdate] = useState({})
-    const [showPopup,setshowPopup] = useState(false)
+    const [showPopup,setshowPopup] = useState(true)
 
     useEffect(()=>{
         axios('http://localhost:8000/api/tasks')
